@@ -1,0 +1,10 @@
+version: "3"
+services:
+  middleware:
+    image: openclaw-middleware:v1
+    container_name: middleware-api
+    restart: always
+    ports:
+      - "19961:5000"
+    volumes:
+      - ./middleware.log:/app/middleware.log
